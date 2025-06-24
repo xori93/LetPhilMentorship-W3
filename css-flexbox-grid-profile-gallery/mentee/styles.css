@@ -1,0 +1,124 @@
+/* 
+STEP 1: Set up the base body style
+- Use a clean font like Arial
+- Remove default margin
+- Center text using text-align
+*/
+
+body {
+  font-family: arial;
+  margin: 0;
+  text-align: center;
+}
+
+/* 
+STEP 2: Style the header
+- Background color: gray
+- Text color: white
+- Padding: 20px
+*/
+
+/* Style for header */
+header {
+  background-color: darkgray;
+  color: white;
+  padding: 20px;
+}
+
+/*
+STEP 3: Create the Flexbox layout
+- Target the .flex-container class
+- Use display: flex to activate Flexbox
+- Use flex-direction: row to align items side-by-side
+- Try other directions like column
+- Use justify-content to align horizontally (try center, space-between, etc.)
+- Use align-items to align vertically (try center, flex-start, etc.)
+- Use flex-wrap: wrap to allow items to move to a new line
+- Add gap: 20px for spacing
+*/
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px;
+}
+
+/*
+STEP 3.1: Style the individual cards inside Flexbox
+- Use flex-grow, flex-shrink, and flex-basis to control size
+- Try align-self to position one card differently
+*/
+
+.flex-container .card {
+  flex-grow: 20px;
+  align-self: center;
+}
+
+.flex-container .card-example {
+  flex-grow: 20rem;
+  align-self: center;
+}
+
+/*
+STEP 4: Create the Grid layout
+- Target the .grid-container class
+- Use display: grid to activate grid layout
+- Use grid-template-columns to define columns (try repeat(3, 1fr))
+- Use grid-template-rows if needed
+- Use justify-items and align-items to align items inside their cells
+- Use justify-content and align-content to align the whole grid
+- Add gap: 20px for spacing
+*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  justify-self: center;
+  border: solid 1px red;
+}
+
+/*
+STEP 4.1: Style the individual cards inside the Grid layout
+- Use grid-column and grid-row to span items
+- Use justify-self and align-self to align an item differently
+*/
+
+.grid-container .card {
+  grid-column: auto;
+  grid-row: auto;
+  align-self: end;
+  background-color: aqua;
+}
+
+/*
+STEP 5: Common card styles
+- Add border, padding, and set max-width
+*/
+
+.card {
+  border: solid 1px blue;
+  padding: 15px;
+  max-width: 200px;
+  margin: auto;
+}
+
+/*
+STEP 6: Image styling
+- Make image 100% width
+- Add border-radius: 8px for round corners
+*/
+
+.card img {
+  /* Add your styles here */
+  width: 100%;
+  border-radius: 20px;
+}
+
+.card-example img {
+  /* Add your styles here */
+  width: 200px;
+}

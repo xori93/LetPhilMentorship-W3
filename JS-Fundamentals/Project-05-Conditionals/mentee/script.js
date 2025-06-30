@@ -4,3 +4,9 @@
 // STEP 4: Use if/else if/else to check grade level
 // STEP 5: Use an if to check if isLoggedIn is false
 // STEP 6: Use a conditional to check if temperature > 30
+
+let score = 85;
+
+if (score > 80) {
+  console.log("Great Job!");
+}

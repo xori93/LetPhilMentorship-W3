@@ -8,14 +8,17 @@
     <!-- ➤ Make the text bold and red (or any bright color you like) -->
     <!-- ➤ We’ll add this class dynamically with JavaScript -->
     <style>
-      /* TODO: Add .highlight class here */
+      .hightlight {
+        color: red;
+        font-weight: bold;
+      }
     </style>
   </head>
   <body>
     <!-- 🧱 STEP 2: Add a heading with an id="title" -->
     <!-- ➤ Just a title for the page; we won't use it in JavaScript -->
-
     <!-- 🔘 STEP 3: Add 3 buttons, each for a different selector -->
+
     <!-- ➤ Button 1: NO id or class (we’ll grab it by tag name) -->
     <!-- ➤ Button 2: Give it id="btnById" -->
     <!-- ➤ Button 3: Give it class="btnByClass" -->
@@ -29,5 +32,18 @@
 
     <!-- ⚙️ STEP 6: Link your JavaScript file at the very bottom -->
     <!-- ➤ Use: <script src="script.js"></script> -->
+    <h1 id="title">Project Events & DOM Selectors</h1>
+    <button>Primary Button Query Selector</button>
+    <button id="btnById">Secondary Button Get Button By ID</button>
+    <button class="btnByClass">Danger Button Get Elements By Class Name</button>
+    <p id="message">Waiting for primary button click</p>
+    <p id="message2">Waiting for secondary button click</p>
+
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+    </ul>
+
+    <script src="script.js"></script>
   </body>
 </html>

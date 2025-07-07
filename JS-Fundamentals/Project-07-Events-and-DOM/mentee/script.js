@@ -10,6 +10,9 @@
 1C — Use getElementsByClassName("btnByClass")[0] to grab the third
      ➤ Call it dangerBtn
 */
+const primaryButton = document.querySelector("button");
+const secondaryButton = document.getElementById("btnById");
+const dangerBtn = document.getElementsByClassName("btnByClass")[0];
 
 /*
 📦 STEP 2: Grab other DOM elements you’ll need
@@ -19,21 +22,36 @@
 - Get all <li> elements → use getElementsByTagName("li"), store in listItems
 - Get all <button> elements → use querySelectorAll("button"), store in allButtonsNL
 */
-
+const message = document.getElementById("message");
+const message2 = document.getElementById("message2");
+const listItems = document.getElementsByTagName("li");
+const allButtonsNl = document.querySelectorAll("button");
 /*
+
+
+
 🖨️ STEP 3: Console check
 
 Log each of the variables from Step 1 and Step 2 to make sure everything is selected properly
 Use console.log() to check your work!
 */
 
+console.log({
+  primaryButton,
+  secondaryButton,
+  dangerBtn,
+  message,
+  message2,
+  listItems,
+  allButtonsNl,
+});
 /*
 💡 STEP 4: Create 4 functions
 
 4A — showPrimaryMessage()
   ➤ Change the innerText of #message to say: "Primary button clicked!"
   ➤ Add the "highlight" class to #message
-  ➤ Log something to the console
+  ➤ Log something to the console  
 
 4B — showSecondaryMessage()
   ➤ Change the innerText of #message2 to say: "Secondary button clicked!"
@@ -61,3 +79,10 @@ Bonus:
    - log each button’s text when clicked
    - run countListItems() every time ANY button is clicked
 */
+function showPrimaryMessage() {
+  message.innerText = "primary button click";
+  message.classList.add("highlight");
+  console.log("fired");
+}
+
+showPrimaryMessage();

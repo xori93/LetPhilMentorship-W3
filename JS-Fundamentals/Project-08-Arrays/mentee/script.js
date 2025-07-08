@@ -1,5 +1,6 @@
 // ---------- STEP 1: Create the array ----------
 // Create an empty array called guestList to store names
+let guestlist = [];
 
 // ---------- STEP 2: Select the DOM elements ----------
 // Use getElementById to select:
@@ -8,6 +9,12 @@
 // - the Remove Last button (#removeBtn)
 // - the <ul> list (#guestList)
 // - the <p> with the total count (#totalCount)
+
+const guestInput = document.getElementById("guestInput");
+const addBtn = document.getElementById("addBtn");
+const removeBtn = document.getElementById("removeBtn");
+const guestList = document.getElementById("guestList");
+const totalCount = document.getElementById("totalCount");
 
 // ---------- STEP 3: Create a function called renderList() ----------
 // Inside the function:

@@ -1,1 +1,10 @@
-body { font-family: sans-serif; padding: 20px; }
+body {
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+.highlight {
+  background-color: darkgoldenrod;
+  padding: 4px;
+  border-radius: 4px;
+}

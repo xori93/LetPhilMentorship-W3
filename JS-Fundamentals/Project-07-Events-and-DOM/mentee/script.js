@@ -10,8 +10,8 @@
 1C — Use getElementsByClassName("btnByClass")[0] to grab the third
      ➤ Call it dangerBtn
 */
-const primaryButton = document.querySelector("button");
-const secondaryButton = document.getElementById("btnById");
+const primaryBtn = document.querySelector("button");
+const secondaryBtn = document.getElementById("btnById");
 const dangerBtn = document.getElementsByClassName("btnByClass")[0];
 
 /*
@@ -37,8 +37,8 @@ Use console.log() to check your work!
 */
 
 console.log({
-  primaryButton,
-  secondaryButton,
+  primaryBtn,
+  secondaryBtn,
   dangerBtn,
   message,
   message2,
@@ -85,4 +85,48 @@ function showPrimaryMessage() {
   console.log("fired");
 }
 
-showPrimaryMessage();
+// message2.classList.add("highlight");
+
+function showSecondaryMessage() {
+  message2.innerText = "Secondary button clicked!";
+  message2.classList.toggle("highlight");
+  console.log("Show Secondary Button");
+}
+
+function dangerAlert() {
+  alert("Danger button!!");
+  console.log("Danger button!!");
+}
+
+function countListItems() {
+  console.log(`there are ${listItems.length} liElements Right now`);
+}
+
+// ➤ When primaryBtn is clicked → run showPrimaryMessage()
+primaryBtn.addEventListener("click", showPrimaryMessage);
+// ➤ When secondaryBtn is clicked → run showSecondaryMessage()
+secondaryBtn.addEventListener("click", showSecondaryMessage);
+// ➤ When dangerBtn is clicked → run dangerAlert()
+dangerBtn.addEventListener("click", dangerAlert);
+
+allButtonsNl.forEach((button) => {
+  button.addEventListener("click", () => {
+    console.log(button.textContent.trim());
+
+    countListItems();
+  });
+});
+
+//[btn1, btn2, btn3]
+//Loop 1: button = btn1
+//Loop 2: button = btn2
+
+//nums = [10,20,40]
+// nums.forEach(())
+
+allButtonsNl.forEach((button) => {
+  button.addEventListener("click", () => {
+    console.log(`${button.textContent} - logged `);
+  }),
+    button.addEventListener("click", countListItems);
+});
